@@ -70,3 +70,49 @@ The code is organized into the following sections:
 
 The `if __name__ == "__main__":` block at the end of the code serves as the entry point of the program. It displays the game description and starts the game when the file is executed directly.
 
+
+## Unit Tests
+
+Unit tests are an essential part of this project, ensuring the correctness and reliability of the dice game code. They are automated tests that verify the behavior of individual units or components of the code in isolation.
+
+### What are Unit Tests?
+
+Unit tests are small, focused tests that validate the functionality of specific parts of the code, such as functions or methods. They are written to test a single unit of code in isolation, independent of other parts of the system. Unit tests help catch bugs, prevent regressions, and provide confidence in the code's correctness.
+
+In this project, unit tests are written using the `unittest` framework, a built-in testing framework in Python. Each test case is defined as a separate method within a test class, and assertions are used to verify the expected behavior of the code.
+
+### Why Use Unit Tests?
+
+Unit tests offer several benefits:
+
+1. **Correctness**: Unit tests help ensure that the code behaves as expected and produces the correct output for various inputs and scenarios.
+
+2. **Bug Detection**: By running unit tests regularly, you can catch bugs early in the development process, making it easier to identify and fix issues.
+
+3. **Regression Prevention**: Unit tests serve as a safety net, preventing regressions and ensuring that existing functionality remains intact as the codebase evolves.
+
+4. **Code Quality**: Writing unit tests encourages better code design, promotes modularity, and helps maintain a clean and maintainable codebase.
+
+5. **Documentation**: Unit tests act as a form of documentation, describing the expected behavior of the code and serving as examples of how to use the various components.
+
+### Running the Unit Tests
+
+To run the unit tests for the dice game, follow these steps:
+
+1. Make sure you have Python installed on your system.
+
+2. Open a terminal or command prompt and navigate to the project's root directory.
+
+3. Run the following command to execute the unit tests: `python -m unittest discover tests`
+
+This command tells Python to discover and run all the unit tests found in the `tests/` directory.
+
+Alternatively, if you have the `pytest` library installed, you can run the tests using the following command:`pytest tests/`
+
+4. The test results will be displayed in the console, indicating which tests passed or failed. If any tests fail, the console output will provide details about the failures, including the specific test cases and any error messages.
+
+5. If all tests pass, you will see a summary indicating the total number of tests run and the success status.
+
+By running the unit tests regularly, you can ensure that the dice game code remains reliable and functions as expected. It is good practice to run the tests whenever making changes to the codebase and before deploying the game to catch any potential issues early on.
+
+Remember to keep the unit tests up to date as you modify or add new features to the game. Whenever you introduce new functionality or make changes to existing code, consider writing corresponding unit tests to maintain the code's quality and reliability.
