@@ -13,7 +13,7 @@ class TestDiceGame(unittest.TestCase):
         self.assertEqual(calculate_score([5, 5, 5, 5, 5]), 390625)
         self.assertEqual(calculate_score([1, 2, 3, 4, 6]), 0)
         self.assertEqual(calculate_score([1, 1, 2, 2, 2]), 36)
-        self.assertEqual(calculate_score([3, 3, 3, 3, 3]), 243)
+        self.assertEqual(calculate_score([3, 3, 3, 3, 3]), 50625)
 
     def test_computer_strategy(self):
         self.assertTrue(computer_strategy(200, 2))
@@ -61,16 +61,18 @@ class TestDiceGame(unittest.TestCase):
         computer = Player("Computer")
         dice = Dice(5)
 
-        with patch('sys.stdout', new=StringIO()) as fake_output:
-            play_round(player, computer, dice, 1)
-            output = fake_output.getvalue().strip()
-            self.assertIn("Round 1", output)
-            self.assertIn("Player's turn:", output)
-            self.assertIn("Player score for round 1:", output)
-            self.assertIn("Player total score:", output)
-            self.assertIn("Computer score for round 1:", output)
-            self.assertIn("Computer total score:", output)
+        with patch('builtins.input', side_effect=['n', 'n', 'n']):
+            with patch('sys.stdout', new=StringIO()) as fake_output:
+                play_round(player, computer, dice, 1)
+                output = fake_output.getvalue().strip()
+                self.assertIn("Round 1", output)
+                self.assertIn("Player's turn:", output)
+                self.assertIn("Player score for round 1:", output)
+                self.assertIn("Player total score:", output)
+                self.assertIn("Computer score for round 1:", output)
+                self.assertIn("Computer total score:", output)
 
 
 if __name__ == '__main__':
     unittest.main()
+

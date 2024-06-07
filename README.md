@@ -73,7 +73,7 @@ The `if __name__ == "__main__":` block at the end of the code serves as the entr
 
 ## Unit Tests
 
-Unit tests are an essential part of this project, ensuring the correctness and reliability of the dice game code. They are automated tests that verify the behavior of individual units or components of the code in isolation.
+Unit tests are an additional part of this project, ensuring the correctness and reliability of the dice game code. They are automated tests that verify the behavior of individual units or components of the code in isolation.
 
 ### What are Unit Tests?
 
@@ -103,11 +103,7 @@ To run the unit tests for the dice game, follow these steps:
 
 2. Open a terminal or command prompt and navigate to the project's root directory.
 
-3. Run the following command to execute the unit tests: `python -m unittest discover tests`
-
-This command tells Python to discover and run all the unit tests found in the `tests/` directory.
-
-Alternatively, if you have the `pytest` library installed, you can run the tests using the following command:`pytest tests/`
+3. Run the following command to execute the unit tests: `python -m unittest discover tests-v`. This command tells Python to discover and run all the unit tests found in the `tests/` directory as long as test file naming conventions for unittest are followed.
 
 4. The test results will be displayed in the console, indicating which tests passed or failed. If any tests fail, the console output will provide details about the failures, including the specific test cases and any error messages.
 
