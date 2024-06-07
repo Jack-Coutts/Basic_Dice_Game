@@ -21,7 +21,7 @@ To run the dice game, make sure you have Python installed on your system. Then, 
 
 1. Clone the repository or download the `dice_game.py` file.
 2. Open a terminal or command prompt and navigate to the directory where the file is located.
-3. Run the following command to start the game: ```python dice_game.py``` or ```python3 dice_game.py```
+3. Run the following command to start the game: python dice_game.py` or `python3 dice_game.py`
 4. Follow the on-screen instructions to play the game.
 
 ## Game Rules
