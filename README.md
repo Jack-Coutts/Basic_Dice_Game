@@ -21,8 +21,27 @@ To run the dice game, make sure you have Python installed on your system. Then, 
 
 1. Clone the repository or download the `dice_game.py` file.
 2. Open a terminal or command prompt and navigate to the directory where the file is located.
-3. Run the following command to start the game: python dice_game.py` or `python3 dice_game.py`
+3. Run the following command to start the game: `python dice_game.py` or `python3 dice_game.py`
 4. Follow the on-screen instructions to play the game.
+
+## Scoring System Explanation
+
+The scoring system in the dice game is designed to reward players for rolling multiple dice with the same value. The scores are squared, cubed, or raised to the fourth power based on the number of matching dice:
+
+1. Rolling three of the same number: (number * 3)^2 points
+2. Rolling four of the same number: (number * 4)^3 points
+3. Rolling five of the same number: (number * 5)^4 points
+
+The exponential scoring system has several benefits:
+
+- It creates a significant difference in scores between rolling three, four, or five of the same number, making the game more exciting and rewarding for lucky rolls.
+- It reflects the rarity and difficulty of rolling multiple dice with the same value, assigning much higher scores to more difficult combinations.
+- It provides a catch-up mechanism, allowing trailing players to quickly close the gap or take the lead with a high-scoring combination.
+- It creates exciting moments in the game when a player rolls a high-scoring combination.
+
+Rolling a straight (1, 2, 3, 4, 5) is considered a special and rare occurrence, so a fixed score of 1,500 points is assigned to it. This adds variety to the game and provides another way for players to achieve a high score.
+
+The specific choice of exponents (squaring for three of a kind, cubing for four of a kind, and raising to the fourth power for five of a kind) is somewhat arbitrary. The main idea is to have an exponential increase in scores as the number of matching dice increases. The scoring system can be adjusted based on preferred level of scoring and game balance.
 
 ## Game Rules
 
@@ -34,7 +53,7 @@ To run the dice game, make sure you have Python installed on your system. Then, 
 - If you roll three of the same number, you get (number * 3)^2 points.
 - If you roll four of the same number, you get (number * 4)^3 points.
 - If you roll five of the same number, you get (number * 5)^4 points.
-- If you roll a straight (1, 2, 3, 4, 5), you get 1500 points.
+- If you roll a straight (1, 2, 3, 4, 5 or 2, 3, 4, 5, 6), you get 1500 points.
 - The player with the highest total score at the end of the ten rounds wins.
 
 ## Code Structure

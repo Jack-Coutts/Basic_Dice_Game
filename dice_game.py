@@ -84,14 +84,14 @@ def calculate_score(rolls):
         if count in score_map:
             score += score_map[count](i)
 
-    # Score for straight (1, 2, 3, 4, 5)
-    if counts == [1, 1, 1, 1, 1, 0]:
+    # Score for straights
+    if set(rolls) == {1, 2, 3, 4, 5} or set(rolls) == {2, 3, 4, 5, 6}:
         score += STRAIGHT_SCORE
 
     return score
 
 
-def computer_strategy(dice, score, rerolls_left):
+def computer_strategy(score, rerolls_left):
     """Computer strategy to decide whether to roll again."""
     if score < 300 and rerolls_left > 0:
         return True
@@ -107,7 +107,7 @@ def play_round(player, computer, dice, round_num):
 
     computer_round_score = 0
     computer_rerolls_left = MAX_REROLLS
-    while computer_strategy(dice, computer_round_score, computer_rerolls_left):
+    while computer_strategy(computer_round_score, computer_rerolls_left):
         computer_round_score = calculate_score(dice.roll())
         computer_rerolls_left -= 1
     computer.score += computer_round_score
@@ -140,3 +140,4 @@ def play_game():
 if __name__ == "__main__":
     display_game_description()
     play_game()
+
