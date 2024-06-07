@@ -103,7 +103,7 @@ To run the unit tests for the dice game, follow these steps:
 
 2. Open a terminal or command prompt and navigate to the project's root directory.
 
-3. Run the following command to execute the unit tests: `python -m unittest discover tests-v`. This command tells Python to discover and run all the unit tests found in the `tests/` directory as long as test file naming conventions for unittest are followed.
+3. Run the following command to execute the unit tests: `python -m unittest discover tests -v`. This command tells Python to discover and run all the unit tests found in the `tests/` directory as long as test file naming conventions for unittest are followed.
 
 4. The test results will be displayed in the console, indicating which tests passed or failed. If any tests fail, the console output will provide details about the failures, including the specific test cases and any error messages.
 
