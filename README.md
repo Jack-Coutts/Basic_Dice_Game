@@ -1,6 +1,6 @@
 # Dice Game
 
-This is an example for the training exercise outlined below, used when training colleagues Python programming at the Crick.
+This repository contains an example answer to the coding exercise outlined below. This is an exercise I set when training colleagues in Python and the code here is used as an example of "good" Python development.
 
 
 This project implements a dice game where the player competes against the computer. The game involves rolling five dice and trying to achieve the highest possible score. The player and the computer take turns rolling the dice and have the opportunity to re-roll up to three times per round to improve their score. The game lasts for ten rounds, and the player with the highest total score at the end wins.
